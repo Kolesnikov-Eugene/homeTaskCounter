@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var counterImageView: UILabel!
+    
+    var counter: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        counterImageView.text = "Значение счетчика: \(counter)"
     }
 
-
+    @IBAction func counterButtonPressed(_ sender: UIButton) {
+        counter += 1
+        counterImageView.text = "Значение счетчика: \(counter)"
+    }
 }
 
